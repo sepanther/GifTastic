@@ -1,0 +1,21 @@
+body {
+    max-width:100%;
+}
+
+#gifs-appear-here {
+    max-width:80%
+}
+
+.gif-box {
+    float:left;
+    margin:20px;
+}
+
+.gif-button {
+    margin:5px;
+    height:21px
+}
+
+#search-bar {
+    float:right;
+}
