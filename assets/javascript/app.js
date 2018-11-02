@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var topics = ["cat", "dog", "fish"]
+var topics = ["Lionel Messi", "Diego Maradona", "Pele", "Zinedine Zidane", "Andres Iniesta", "Xavi", "Ibrahimovic", "Thierry Henry", "Frank Lampard", "Neymar", "Carles Puyol", "Paul Pogba"]
 
 
 
@@ -10,11 +10,10 @@ function createButtons() {
     $("#buttons").empty();
     for (i=0;i<topics.length;i++) {
         var newButton = $("<button>")
-        newButton.addClass("gif-button")
+        newButton.addClass("gif-button btn btn-info")
         newButton.text(topics[i])
         newButton.val(topics[i])
         $("#buttons").append(newButton)
-        console.log(newButton);
     }
 }
 
@@ -37,9 +36,9 @@ $(document.body).on("click", ".gif-button", function() {
             newDiv.addClass("gif-box")
             newGif = $("<img>")
             newGif.addClass("gif-image")
-            newGif.attr("src",results[i].images.fixed_height_still.url)
-            newGif.attr("gif-motion", results[i].images.fixed_height.url)
-            newGif.attr("gif-still",results[i].images.fixed_height_still.url)
+            newGif.attr("src",results[i].images.fixed_height_small_still.url)
+            newGif.attr("gif-motion", results[i].images.fixed_height_small.url)
+            newGif.attr("gif-still",results[i].images.fixed_height_small_still.url)
             newGif.attr("status", "still")
             var newRating = $("<div>")
             newRating.text("Rating: " + results[i].rating.toUpperCase())

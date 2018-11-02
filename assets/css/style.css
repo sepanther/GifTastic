@@ -1,9 +1,11 @@
 body {
     max-width:100%;
+    padding:50px;
+    background:#d3d3d3
 }
 
 #gifs-appear-here {
-    max-width:80%
+    max-width:70%
 }
 
 .gif-box {
@@ -13,9 +15,26 @@ body {
 
 .gif-button {
     margin:5px;
-    height:21px
+}
+
+.gif-button.hover {
+    color:yellow;
+}
+
+#gif-submit {
+    margin-top:10px
 }
 
 #search-bar {
     float:right;
 }
+
+form {
+    display:block;
+}
+
+
+/* #button-toolbar {
+    display:flex;
+    justify-content: space-between;
+} */
