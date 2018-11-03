@@ -66,9 +66,18 @@ $(document.body).on("click", ".gif-image", (function() {
 $("#gif-submit").on("click", function() {
     event.preventDefault();
     searchTerm = $("#gif-input").val().trim();
-    $("#gif-input").val("");
-    topics.push(searchTerm);
-    createButtons();
+    if (searchTerm !== "" && topics.indexOf(searchTerm) == -1) {
+        $("#gif-input").val("");
+        topics.push(searchTerm);
+        createButtons();
+    }
+    else if (searchTerm == "") {
+        alert("You need to type something in first!")
+    }
+    else {
+        alert("That button already exists!")
+    }
+
 })
 
 
